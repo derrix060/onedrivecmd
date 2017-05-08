@@ -6,7 +6,8 @@
 
 import sys
 import onedrivesdk
-from helper_file import *
+
+from .helper_file import *
 
 
 ### Helper functions

@@ -5,11 +5,12 @@
 # Created: 09/24/2016
 
 import logging
-from static import * 
-from uploader import *
-from helper_file import *
-from helper_item import *
-from session import *
+from .uploader import *
+from .static import *
+from .helper_file import *
+from .helper_item import *
+from .session import *
+
 import onedrivesdk
 from onedrivesdk.helpers.resource_discovery import ResourceDiscoveryRequest
 

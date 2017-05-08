@@ -5,10 +5,10 @@
 # Created: 09/24/2016
 
 import argparse
+from .static import *
+from .helper_file import * 
 
-from static import *
 import onedrivesdk
-from helper_file import * 
 import logging
 import json
 import os

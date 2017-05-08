@@ -5,10 +5,12 @@
 # Created: 09/24/2016
 
 import json
-from static import * 
+
+
+from .static import *
+from .helper_file import *
+from .helper_item import *
 from progress.bar import Bar
-from helper_file import *
-from helper_item import * 
 import requests
 
 
