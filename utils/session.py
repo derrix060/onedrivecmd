@@ -26,7 +26,7 @@ def get_access_token(client):
     This is just a helper function to assist with self-defined
     downloading and uploading.
     """
-    return client.auth_provider.access_token.encode('utf-8')
+    return client.auth_provider.access_token
 
 
 def refresh_token(client):
@@ -70,7 +70,7 @@ def save_session(client, path = ''):
         }
         status_dict['client.auth_provider._session'] = dict_merge(client.auth_provider._session.__dict__,
                                                                   {'_expires_at': int(client.auth_provider._session._expires_at),
-                                                                   'scope_string': ' '.join([i.encode('utf-8') for i in client.auth_provider._session.scope]),
+                                                                   'scope_string': ' '.join([i for i in client.auth_provider._session.scope]),
                                                                    })
 
     else:
@@ -86,7 +86,7 @@ def save_session(client, path = ''):
         
         status_dict['client.auth_provider._session'] = dict_merge(client.auth_provider._session.__dict__,
                                                                   {'_expires_at': int(client.auth_provider._session._expires_at),
-                                                                   'scope_string': ' '.join([i.encode('utf-8') for i in client.auth_provider._session.scope]),
+                                                                   'scope_string': ' '.join([i for i in client.auth_provider._session.scope]),
                                                                    })
 
     status = json.dumps(status_dict)

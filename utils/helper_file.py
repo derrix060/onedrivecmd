@@ -80,7 +80,7 @@ def get_remote_path_by_item(item):
         # only root node does not have this attribute
         return '/'
     
-    return unquote(item.to_dict()['parentReference']['path'] +'/' + item.to_dict()['name']).encode('utf-8').replace('/drive/root:', '')
+    return unquote(item.to_dict()['parentReference']['path'] +'/' + item.to_dict()['name']).replace('/drive/root:', '')
 
 
 def dict_merge(a, b):

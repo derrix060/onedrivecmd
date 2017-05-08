@@ -64,9 +64,9 @@ def get_item_temp_download_info(item):
     
     """
     file_info = item.to_dict()
-    return (file_info['@content.downloadUrl'].encode('utf-8'),
+    return (file_info['@content.downloadUrl'],
             file_info['size'], )
-            #file_info['file']['hashes']['sha1Hash'].encode('utf-8'))
+            #file_info['file']['hashes']['sha1Hash'])
 
 
 def get_bare_item_by_path(client, path = ''):

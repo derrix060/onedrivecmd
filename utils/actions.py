@@ -45,7 +45,7 @@ def init_business(client):
 
     # now the url looks like "('https://login.microsoftonline.com/common/oauth2/authorize',)?redirect_uri=https%3A%2F%2Fod.cnbeining.com&response_type=code&client_id=bac72a8b-77c8-4b76-8b8f-b7c65a239ce6"
     
-    auth_url = auth_url.encode('utf-8').replace( "('", '').replace("',)", '')
+    auth_url = auth_url.replace( "('", '').replace("',)", '')
     
     # Ask for the code
     print('ATTENTION: This is for Onedrive Business and Office 365 only.')
@@ -234,7 +234,7 @@ def do_list(client, args):
         folder = get_remote_item(client, path = path_to_remote_path(path))
 
         for i in folder:
-            name = 'od:/' + i.name.encode('utf-8')
+            name = 'od:/' + i.name
             if i.folder:
                 # make a little difference so the user can notice
                 name += '/'
